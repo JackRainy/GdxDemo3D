@@ -11,16 +11,16 @@ import io.piotrjastrzebski.bte.AIEditor;
 
 public class BehaviorTreeController {
 
-	private final AIEditor btreeEditor;
+//	private final AIEditor btreeEditor;
 	private DogCharacter currentDog;
 
 	public BehaviorTreeController () {
-		btreeEditor = createDogBTEditor();
+//		btreeEditor = createDogBTEditor();
 	}
 
 	public void step(DogCharacter dog, float deltaTime) {
 		if (currentDog == dog) {
-			btreeEditor.update(deltaTime);
+//			btreeEditor.update(deltaTime);
 		}
 		else {
 			try {
@@ -32,19 +32,19 @@ public class BehaviorTreeController {
 	}
 
 	public void toggleEditorWindow(Group group, TextButton toggle) {
-		btreeEditor.toggleWindow(group);
-		toggle.setText(btreeEditor.isWindowVisible() ?  "Hide Editor" : "Show Editor");
+//		btreeEditor.toggleWindow(group);
+//		toggle.setText(btreeEditor.isWindowVisible() ?  "Hide Editor" : "Show Editor");
 	}
 
 	public void setCurrentDog(DogCharacter dog) {
 		currentDog = dog;
-		btreeEditor.getWindow().getTitleLabel().setText(dog.dogName);
-		btreeEditor.initialize(dog.tree);
+//		btreeEditor.getWindow().getTitleLabel().setText(dog.dogName);
+//		btreeEditor.initialize(dog.tree);
 	}
 
 	public void reset() {
 		currentDog = null;
-		btreeEditor.reset();
+//		btreeEditor.reset();
 	}
 	
 	private static AIEditor createDogBTEditor() {
